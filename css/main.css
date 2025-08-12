@@ -311,17 +311,12 @@ section {
 
 .aboutUs {
 	width: 100%;
-	padding: 100px 0;
+	padding-top: 50px;
 }
 
 .aboutUs .container {
 	background: var(--secondary-color);
 	border-radius: 0.5rem;
-}
-
-.aboutUs .aboutHeader {
-	justify-content: space-between;
-	align-items: start;
 }
 
 .aboutUs .aboutHeader {
@@ -331,12 +326,14 @@ section {
 	align-items: start;
 }
 
-.aboutHeader .tagline {
+.aboutHeader .tagline,
+.formHeader .tagline {
 	font-size: var(--h4);
 	color: var(--primarty-color);
 }
 
-.aboutHeader .about__title {
+.aboutHeader .about__title,
+.formHeader .form__title {
 	color: var(--primarty-color);
 	margin-top: 0;
 	font-size: var(--h1);
@@ -345,6 +342,7 @@ section {
 .aboutUs .aboutText {
 	width: 100%;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .aboutText .about__txt {
@@ -450,7 +448,7 @@ section {
 
 .services {
 	width: 100%;
-	padding-bottom: 100px 0;
+	padding-top: 50px;
 }
 
 .services .container {
@@ -458,25 +456,30 @@ section {
 	border-radius: 0.5rem;
 }
 
-.services .tagline {
+.services .tagline,
+.team .tagline {
 	font-size: var(--h4);
 }
 
-.services .serviceText {
+.services .serviceText,
+.team .teamText {
 	width: inherit;
 	justify-content: space-between;
 }
 
-.services .service__title {
+.services .service__title,
+.team .team__title {
 	font-size: var(--h1);
 }
 
-.serviceText .service__txt {
+.serviceText .service__txt,
+.teamText .team__txt {
 	max-width: 50%;
 	font-size: var(--body);
 }
 
-.services .viewAllServices {
+.services .viewAllServices,
+.team .viewAllServices {
 	max-width: 20%;
 	justify-content: space-around;
 	align-items: center;
@@ -485,7 +488,8 @@ section {
 	padding: 0.5rem 2rem;
 }
 
-.services .viewAll {
+.services .viewAll,
+.team .viewAll {
 	color: var(--white);
 }
 
@@ -551,7 +555,7 @@ section {
 
 .testimonials {
 	width: 100%;
-	padding: 100px 0;
+	padding-top: 50px;
 }
 
 .testimonials .container {
@@ -697,6 +701,214 @@ section {
 	border-radius: 0.877rem;
 }
 
+/* Team Section */
+
+.team {
+	width: 100%;
+}
+
+.team .container {
+	background: var(--primarty-color);
+	border-radius: 0.877rem;
+}
+
+.team .grid {
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	padding-top: 50px;
+}
+
+.team__cards {
+	position: relative;
+	height: 450px;
+}
+
+.team__cards img {
+	height: 100%;
+	border-radius: 0.877rem;
+}
+
+.teamProfile {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	color: var(--white);
+	border-radius: 0.877rem;
+}
+
+.teamProfWrapper {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: end;
+}
+
+.profileSocials {
+	margin: 10px 0;
+}
+/* End Of team Section */
+
+/* Footer Section */
+
+.e_health_foot {
+	width: 100%;
+}
+
+.e_health_foot .container {
+	background: var(--secondary-color);
+	border-radius: 0.877rem;
+}
+
+.e_health_foot .formHeader {
+	grid-template-columns: 25% 1fr 25%;
+	align-items: start;
+}
+
+.formHeader {
+	padding-bottom: 50px;
+}
+
+.formTitWrap .form__txt {
+	font-size: var(--body);
+	color: var(--white);
+	align-self: start;
+}
+
+.formContact .grid {
+	grid-template-columns: 50px 60%;
+	place-items: center;
+	gap: 20px;
+}
+
+.formContact i {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--white);
+	padding: 1rem 2rem;
+	border-radius: 0.877rem;
+}
+
+.formContact p {
+	font-size: var(--body);
+	color: var(--primarty-color);
+}
+.formContact h4 {
+	font-size: var(--h4);
+	color: var(--primarty-color);
+}
+
+.form__wrapper {
+	grid-template-columns: repeat(2, 1fr);
+	align-items: start;
+}
+
+.userForm {
+	background: var(--white);
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 30px;
+	border-radius: 0.877rem;
+}
+
+.userForm .inputRow {
+	width: 100%;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	margin: 15px auto;
+	gap: 10px;
+}
+.userForm .inputRow input,
+.inputRow select {
+	width: 100%;
+	padding: 1.2rem;
+	outline: 0;
+	border: 1px solid #1d1c1c6f;
+	border-radius: 0.477rem;
+	transition: 0.5s ease;
+}
+
+.userForm .inputRow input:focus,
+.inputRow select:focus {
+	width: 100%;
+	padding: 1.2rem;
+	outline: 0;
+	border: 1px solid var(--dark);
+}
+
+.userForm .input100 #message {
+	width: 100%;
+	padding: 1.2rem;
+	outline: 0;
+	border: 1px solid #1d1c1c6f;
+	border-radius: 0.477rem;
+	transition: 0.5s ease;
+	height: 200px;
+}
+
+.userFormImg {
+	height: 732px;
+	border-radius: 0.877rem;
+}
+
+.userFormImg img {
+	height: 100%;
+	border-radius: 0.877rem;
+}
+
+.submitBtn {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+}
+.submitBtn button[type="submit"] {
+	width: 100%;
+	max-width: 250px;
+	padding: 1.1rem 3rem 1.1rem 1.2rem;
+	background: var(--dark);
+	gap: 30px;
+	border-radius: 0.477rem;
+	color: var(--white);
+	display: flex;
+	align-items: center;
+}
+
+.footerNav {
+	background: var(--white);
+	margin-top: 30px;
+	border-radius: 0.877rem;
+	padding: 0.877rem;
+}
+
+.footerNav .grid {
+	grid-template-columns: repeat(3, 1fr);
+	place-items: center;
+}
+
+.footerInner .footerDesc {
+	font-size: var(--body);
+	margin: 15px 0;
+}
+
+.footerNavLists .footNavList {
+	list-style: none;
+}
+.footerNavLists .footNavTitle {
+	font-size: var(--h3);
+}
+
+.footerNavLists .footNavItem {
+	margin: 1rem auto;
+}
+
+/* A ripples used as an overlay on the clip after the testimonial cards */
 .ripple_contain {
 	position: absolute;
 	top: 0;
