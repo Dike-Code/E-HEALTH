@@ -986,11 +986,58 @@ section {
 		width: 100%;
 	}
 
-	.testimonials .testHeader {
+	.testimonials .testHeader,
+	.e_health_foot .formHeader {
 		grid-template-columns: 1fr;
 	}
 
 	.team .team__wrapper {
+		grid-template-columns: 1fr;
+	}
+
+	.e_health_foot .form__wrapper {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 768px) {
+	.aboutUs .aboutText,
+	.services .serviceText,
+	.testimonials .testText,
+	.team .teamText {
+		flex-flow: column;
+	}
+	.aboutText .about__txt,
+	.serviceText .service__txt,
+	.testText .test__txt,
+	.teamText .team__txt {
+		max-width: 100%;
+	}
+
+	.aboutText .moreAboutUs,
+	.serviceText .viewAllServices,
+	.testText .slideControl,
+	.teamText .viewAllServices {
+		max-width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.testText .slideControl {
+		justify-content: space-between;
+		padding: 20px 0;
+	}
+
+	.missionContain {
+		margin: 50px auto;
+		grid-template-columns: 1fr;
+	}
+
+	.mission__img__container {
+		order: 1;
+	}
+
+	.services .serviceList {
 		grid-template-columns: 1fr;
 	}
 }
