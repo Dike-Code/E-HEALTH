@@ -166,7 +166,11 @@ section {
 	padding: 40px 0;
 }
 
-.showcase .grid {
+.showcase .container,
+.showcase .show__heading,
+.showcase .show__cta,
+.showcase .show__grid_wrapper,
+.show__img__wrapper {
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: stretch;
 	align-items: start;
@@ -261,6 +265,7 @@ section {
 .show__card .show_card_content {
 	position: absolute;
 	left: 0;
+	right: 0;
 	bottom: 0;
 	background: var(--milkWhite);
 	margin: 1rem;
@@ -283,6 +288,7 @@ section {
 .showcase .show__img__wrapper {
 	position: absolute;
 	left: 0;
+	right: 0;
 	bottom: 30px;
 	margin: 0 1rem;
 	justify-content: center;
@@ -908,6 +914,67 @@ section {
 	margin: 1rem auto;
 }
 
+.footNavList .footNavLink {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.footerNav .copy {
+	margin: 20px auto;
+	padding-top: 15px;
+	border-top: 2px solid var(--dark);
+}
+
+@media (max-width: 960px) {
+	.navigation__home {
+		position: absolute;
+		top: -1000px;
+		left: 0;
+		right: 0;
+		z-index: -2;
+	}
+
+	.showcase .container,
+	/* .showcase .show__heading, */
+	/* .showcase .show__cta, */
+	.showcase .show__grid_wrapper {
+		grid-template-columns: repeat(1, 1fr);
+		justify-content: center;
+		align-items: center;
+	}
+
+	.show__card {
+		position: relative;
+		height: 450px;
+	}
+
+	.showcase .show__img__wrapper {
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: 1fr;
+	}
+
+	.showcase .show__img__contain {
+		height: 450px;
+	}
+
+	.show__img__wrapper .show__img__content {
+		width: 100%;
+	}
+
+	.aboutUs .aboutHeader,
+	.aboutUs .missionCards,
+	.services .serviceList,
+	.serviceHeader {
+		grid-template-columns: 1fr;
+	}
+
+	.service__item:hover {
+		transform: scale(0.98);
+		width: 100%;
+	}
+}
+
 /* A ripples used as an overlay on the clip after the testimonial cards */
 .ripple_contain {
 	position: absolute;
@@ -932,7 +999,6 @@ section {
 	color: #fff;
 	border: 2px solid #fff;
 	cursor: pointer;
-
 	animation: ripple 1.1s ease infinite;
 }
 
