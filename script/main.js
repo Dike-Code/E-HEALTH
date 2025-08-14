@@ -1,3 +1,10 @@
+const menu = document.querySelector(".toggle__home");
+const navigation = document.querySelector(".navigation__home");
+
+menu.addEventListener("click", () => {
+	navigation.classList.toggle("show");
+});
+
 const swiper = new Swiper(".swiper", {
 	loop: true,
 	graBCursor: true,

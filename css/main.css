@@ -106,7 +106,7 @@ section {
 	justify-content: center;
 	background: var(--primarty-color);
 	position: relative;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 }
 
 .navbar .container {
@@ -115,15 +115,14 @@ section {
 	align-items: center;
 	justify-content: space-between;
 	height: 80px;
-	padding: 3rem 4rem;
+	padding: 3rem 2.5rem;
 }
 
 /* Logo */
 
 /* MobileMenu */
-.toggle__home {
+.bar__content {
 	display: none;
-	position: absolute;
 }
 
 /* NavigationHome */
@@ -936,11 +935,62 @@ section {
 
 @media (max-width: 960px) {
 	.navigation__home {
-		position: absolute;
-		top: -1000px;
+		position: fixed;
+		top: 0;
+		left: -1000px;
+		right: 0;
+		bottom: 0;
+		z-index: -2;
+		transition: 0.5s ease;
+		flex-flow: column;
+		width: 100%;
+		height: 100%;
+	}
+
+	.navigation__home.show {
+		background: var(--primarty-color);
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
 		left: 0;
 		right: 0;
-		z-index: -2;
+		z-index: 1;
+		transition: 0.5s ease-out;
+	}
+
+	.navbar .navbar__list {
+		flex-flow: column;
+	}
+
+	.navbar .navbar__list .nav__item {
+		padding: 30px 0;
+	}
+
+	.toggle__home {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 25px;
+		background: var(--secondary-color);
+		border-radius: 0.877rem;
+		padding: 0 0.877rem;
+		position: relative;
+		z-index: 4;
+	}
+
+	.bar__contain .bar {
+		display: flex;
+		background: var(--dark);
+		width: 30px;
+		height: 3px;
+		margin: 5px;
+		background: var(--white);
+	}
+
+	.bar__content {
+		display: block;
+		color: var(--white);
 	}
 
 	.showcase .container,
@@ -1002,7 +1052,8 @@ section {
 }
 
 @media (max-width: 768px) {
-	.container {
+	.container,
+	.navbar .container {
 		margin: 0 auto;
 		padding: 1.2rem;
 	}
