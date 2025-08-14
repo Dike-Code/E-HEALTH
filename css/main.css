@@ -27,7 +27,6 @@ html {
 	padding: 0;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	overflow-x: hidden;
 }
 
 body {
@@ -68,7 +67,7 @@ section {
 	width: 100%;
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 1.5rem;
+	padding: 2.5rem;
 }
 
 .flex {
@@ -107,6 +106,7 @@ section {
 	justify-content: center;
 	background: var(--primarty-color);
 	position: relative;
+	overflow-x: hidden;
 }
 
 .navbar .container {
@@ -1002,6 +1002,11 @@ section {
 }
 
 @media (max-width: 768px) {
+	.container {
+		margin: 0 auto;
+		padding: 1.2rem;
+	}
+
 	.aboutUs .aboutText,
 	.services .serviceText,
 	.testimonials .testText,
@@ -1038,8 +1043,39 @@ section {
 		order: 1;
 	}
 
-	.services .serviceList {
+	.services .serviceList,
+	.showcase .show__cta,
+	.showcase .show__heading,
+	.footerNav .footerInner,
+	.e_health_foot .inputRow {
 		grid-template-columns: 1fr;
+	}
+
+	.showcase .profileRating {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: nowrap;
+		gap: 20px;
+	}
+
+	.showcase .prof__img {
+		display: grid;
+		grid-template-columns: repeat(3, 40px);
+		justify-content: center;
+		align-items: center;
+		width: auto;
+		height: 40px;
+		border-radius: 100px;
+	}
+
+	/* .showcase .prof__img {
+		width: 150px;
+		justify-content: space-between;
+	} */
+
+	.footerNav .footerInner {
+		text-align: center;
 	}
 }
 
