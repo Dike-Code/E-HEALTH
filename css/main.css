@@ -1055,7 +1055,7 @@ section {
 	.container,
 	.navbar .container {
 		margin: 0 auto;
-		padding: 1.2rem;
+		padding: 1.1rem;
 	}
 
 	.aboutUs .aboutText,
@@ -1120,10 +1120,40 @@ section {
 		border-radius: 100px;
 	}
 
-	/* .showcase .prof__img {
-		width: 150px;
-		justify-content: space-between;
-	} */
+	.show__card,
+	.services .service__item,
+	.team__cards,
+	.userFormImg {
+		position: relative;
+		height: 350px;
+	}
+
+	.aboutHeader .about__title,
+	.formHeader .form__title,
+	.services .service__title,
+	.team .team__title,
+	.testHeader .test__title {
+		font-size: var(--h2);
+	}
+
+	.showcase .show__100_wrapper .show__title {
+		font-size: var(--h2);
+		order: 2;
+		margin: 0;
+	}
+
+	.showcase .profileRating {
+		margin-top: 15px;
+		align-items: center;
+	}
+
+	.userCard {
+		padding: 50px 1.5rem;
+	}
+
+	.userForm {
+		padding: 50px 20px;
+	}
 
 	.footerNav .footerInner {
 		text-align: center;
