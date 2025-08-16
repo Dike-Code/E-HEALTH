@@ -278,6 +278,7 @@ section {
 	border-radius: 2rem;
 	height: 850px;
 	position: relative;
+	overflow-y: hidden;
 }
 
 .showcase img {
