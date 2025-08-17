@@ -433,6 +433,7 @@ section {
 .missionCards .card__body,
 .statment .card__body {
 	font-size: var(--body);
+	font-weight: 350;
 }
 .missionCards .card1 {
 	background: var(--B);
