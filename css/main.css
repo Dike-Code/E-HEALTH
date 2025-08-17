@@ -1,5 +1,7 @@
 /* universal Style */
 
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 :root {
 	/* Colors */
 	--primarty-color: #d6e3e8;
@@ -19,6 +21,7 @@
 	--h3: 1.5rem;
 	--h4: 1.25rem;
 	--body: 1rem;
+	--Anton: "Anton", sans-serif;
 }
 
 *,
@@ -32,7 +35,7 @@ html {
 body {
 	font-size: 15.5px;
 	line-height: 1.6;
-	font-family: "Roboto", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	font-optical-sizing: auto;
 	font-weight: weight;
 	font-style: normal;
@@ -167,13 +170,17 @@ section {
 }
 
 .showcase .container,
-.showcase .show__heading,
 .showcase .show__cta,
 .showcase .show__grid_wrapper,
 .show__img__wrapper {
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: stretch;
 	align-items: start;
+}
+
+.showcase .show__heading {
+	grid-template-columns: 1.5fr 1fr;
+	gap: 0;
 }
 
 .showcase__content__wrapper {
@@ -197,6 +204,8 @@ section {
 }
 .showcase .show__100_wrapper .show__title {
 	font-size: var(--h1);
+	font-family: var(--Anton);
+	font-weight: 500;
 }
 .showcase .show__100_wrapper .show__subhead {
 	font-size: var(--h2);
@@ -211,15 +220,16 @@ section {
 
 .showcase .profileRating {
 	display: flex;
+	flex-flow: column;
 	justify-content: center;
-	align-items: start;
+	align-items: center;
 	flex-wrap: wrap;
 	gap: 20px;
 }
 .showcase .prof__img {
 	display: grid;
 	grid-template-columns: repeat(3, 55px);
-	justify-content: end;
+	justify-content: center;
 	align-items: center;
 	width: 55px;
 	height: 55px;
@@ -344,6 +354,8 @@ section {
 	color: var(--primarty-color);
 	margin-top: 0;
 	font-size: var(--h1);
+	font-family: var(--Anton);
+	font-weight: 400;
 }
 
 .aboutUs .aboutText {
@@ -477,6 +489,8 @@ section {
 .services .service__title,
 .team .team__title {
 	font-size: var(--h1);
+	font-family: var(--Anton);
+	font-weight: 400;
 }
 
 .serviceText .service__txt,
@@ -546,6 +560,8 @@ section {
 .list__title {
 	font-size: var(--h2);
 	color: var(--primarty-color);
+	font-family: var(--Anton);
+	font-weight: 300;
 }
 
 .list__txt {
@@ -599,6 +615,8 @@ section {
 	margin-top: 0;
 	font-size: var(--h1);
 	line-height: 1.4;
+	font-family: var(--Anton);
+	font-weight: 400;
 }
 
 .testimonials .testText {
@@ -934,7 +952,7 @@ section {
 	}
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
 	.navigation__home {
 		position: fixed;
 		top: 0;
@@ -1105,10 +1123,12 @@ section {
 
 	.showcase .profileRating {
 		display: flex;
-		justify-content: space-between;
+		flex-flow: row;
+		justify-content: space-evenly;
 		align-items: center;
 		flex-wrap: nowrap;
 		gap: 20px;
+		margin: 20px auto;
 	}
 
 	.showcase .prof__img {
@@ -1137,8 +1157,12 @@ section {
 		font-size: var(--h2);
 	}
 
+	.show__100_wrapper {
+		text-align: center;
+	}
+
 	.showcase .show__100_wrapper .show__title {
-		font-size: var(--h2);
+		font-size: 50px;
 		order: 2;
 		margin: 0;
 	}
@@ -1146,6 +1170,13 @@ section {
 	.showcase .profileRating {
 		margin-top: 15px;
 		align-items: center;
+	}
+
+	.show__cta,
+	.clip {
+		justify-content: center;
+		width: 100%;
+		max-width: 0 auto;
 	}
 
 	.userCard {
