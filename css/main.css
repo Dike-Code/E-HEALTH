@@ -108,7 +108,11 @@ section {
 	align-items: center;
 	justify-content: center;
 	background: var(--primarty-color);
-	position: relative;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 99;
 	/* overflow-x: hidden; */
 }
 
@@ -148,6 +152,7 @@ section {
 
 .navbar .nav__link {
 	text-decoration: none;
+	color: var(--dark);
 }
 
 .navbar .cta__button {
@@ -166,7 +171,7 @@ section {
 /* Showcase */
 
 .showcase {
-	padding: 40px 0;
+	padding-top: 130px;
 }
 
 .showcase .container,
