@@ -1,8 +1,28 @@
 const menu = document.querySelector(".toggle__home");
 const navigation = document.querySelector(".navigation__home");
 
+// Clip Handle
+const videoClip = document.querySelector(".testClip");
+
+const rippleBtn = document.querySelector(".ripple_contain");
+
 menu.addEventListener("click", () => {
 	navigation.classList.toggle("show");
+});
+
+rippleBtn.addEventListener("click", () => {
+	videoClip.play();
+	rippleBtn.style.opacity = "0";
+	setTimeout(() => {
+		rippleBtn.style.display = "none";
+	}, 3000);
+});
+
+videoClip.addEventListener("ended", () => {
+	rippleBtn.style.opacity = "1";
+	setTimeout(() => {
+		rippleBtn.style.display = "flex";
+	}, 0);
 });
 
 const swiper = new Swiper(".swiper", {
