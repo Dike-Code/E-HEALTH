@@ -13,16 +13,10 @@ menu.addEventListener("click", () => {
 rippleBtn.addEventListener("click", () => {
 	videoClip.play();
 	rippleBtn.style.opacity = "0";
-	setTimeout(() => {
-		rippleBtn.style.display = "none";
-	}, 3000);
 });
 
 videoClip.addEventListener("ended", () => {
 	rippleBtn.style.opacity = "1";
-	setTimeout(() => {
-		rippleBtn.style.display = "flex";
-	}, 0);
 });
 
 const swiper = new Swiper(".swiper", {
