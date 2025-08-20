@@ -812,9 +812,9 @@ section {
 }
 
 .formContact .grid {
-	grid-template-columns: 50px 60%;
-	place-items: center;
-	gap: 20px;
+	grid-template-columns: 50px 1fr;
+	justify-content: center;
+	align-self: center;
 }
 
 .formContact i {
