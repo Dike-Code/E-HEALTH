@@ -14,6 +14,7 @@
 	--P: #ffb2e7;
 	--B: #ffc69e;
 	--Lteal: #acfec7;
+	--btnhover: #a52438;
 
 	/* Fonts */
 	--h1: 3.5rem;
@@ -98,6 +99,11 @@ section {
 	color: var(--white);
 	padding: 1rem 2rem;
 	border-radius: 0.5rem;
+	transition: 0.3s ease;
+}
+
+.btn:hover {
+	background: var(--btnhover);
 }
 
 /* Navbar */
@@ -164,6 +170,11 @@ section {
 	align-items: center;
 	gap: 10px;
 	text-decoration: none;
+	transition: background 0.3s ease-in-out;
+}
+
+.navbar .cta__button:hover {
+	background: var(--btnhover);
 }
 
 /* Nvabar Ends */

@@ -24,7 +24,7 @@ const swiper = new Swiper(".swiper", {
 	graBCursor: true,
 	spaceBetween: 10,
 	slidesPerView: "3",
-
+	autoplay: true,
 	// If we need pagination
 	pagination: {
 		el: ".swiper-pagination",
